@@ -8,9 +8,11 @@ const PageAccueil = ({token, setToken, setNoLog}) => {
     const [selectedItem, setSelectedItem] = useState('');
 
     const [isOpen, setIsOpen] = useState(true);
+    const [Open, setOpen] = useState(false);
     
     const handleClickBurger = () => {
       setIsOpen(!isOpen);
+      setOpen(!Open);
     };
   
 
@@ -21,7 +23,7 @@ const PageAccueil = ({token, setToken, setNoLog}) => {
   
     return(
       <Container>
-        <PartieGauche handleClickBurger={handleClickBurger} isOpen={isOpen} token={token} setToken={setToken} selectedItem={selectedItem} onItemClick={handleClick} />
+        <PartieGauche handleClickBurger={handleClickBurger} Open={Open} isOpen={isOpen} token={token} setToken={setToken} selectedItem={selectedItem} onItemClick={handleClick} />
         <PartieDroite handleClickBurger={handleClickBurger} isOpen={isOpen} setIsOpen={setIsOpen} setNoLog={setNoLog} setToken={setToken} selectedItem={selectedItem} />
       </Container>
     )

@@ -5,7 +5,7 @@ import { MdDashboard } from 'react-icons/md';
 import { SlScreenDesktop } from 'react-icons/sl';
 import { GiHamburgerMenu } from "react-icons/gi";
 
-const PartieGauche = ({ onItemClick, selectedItem, isOpen, handleClickBurger }) => {
+const PartieGauche = ({ onItemClick, selectedItem, isOpen,Open, handleClickBurger }) => {
   const [user, setUser] = useState(null);    
     
   // const fetchUserProfile = async () => {
@@ -30,7 +30,7 @@ const PartieGauche = ({ onItemClick, selectedItem, isOpen, handleClickBurger }) 
     return (
       <Gauche isOpen={isOpen}>
         <SidebarEnHaut>
-          <DivBurger isOpen={isOpen} onClick={handleClickBurger}><GiHamburgerMenu /></DivBurger>
+          <DivBurger isOpen={Open} onClick={handleClickBurger}><GiHamburgerMenu /></DivBurger>
           <Title>RED PRODUCT</Title>
           <TextePrincipal>Principal</TextePrincipal>
           <DivCrud isDashboard={selectedItem === 'dashboard' || selectedItem === ''}>
