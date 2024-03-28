@@ -6,8 +6,8 @@ import { TitleForm, DivContainer, ContainerForm, FormLog, TitleLog, InputLog, In
 
 const FormulaireLogin = ({ setToken, setNoLog }) => {
     const [isChecked, setIsChecked] = useState(false);
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
   
     const handleCheckBoxChange = () => {
@@ -17,7 +17,7 @@ const FormulaireLogin = ({ setToken, setNoLog }) => {
     const handleLogin = async (e) => {
       e.preventDefault();
       try {
-        const response = await axios.post('http://localhost:4000/auth/login', {
+        const response = await axios.post("http://localhost:4000/auth/login", {
           email,
           password,
         });
@@ -28,13 +28,13 @@ const FormulaireLogin = ({ setToken, setNoLog }) => {
         const tokenRecup = localStorage.getItem("token", token);
         setToken(tokenRecup)
       } catch (error) {
-        console.error('Erreur lors de la connexion :', error);
+        console.error("Erreur lors de la connexion :", error);
       }
     };
     
 
     const handleInscrire = () => {
-      console.log("S'inscrire");
+      console.log("Inscrire");
       setNoLog(true)
     };
 
@@ -44,8 +44,8 @@ const FormulaireLogin = ({ setToken, setNoLog }) => {
             <TitleForm><BsBookmarkFill /> Red Product</TitleForm>
           <FormLog>
             <TitleLog>Connectez-vous en tant qu'administrateur</TitleLog>
-              <InputLog value={email} onChange={(e) => setEmail(e.target.value)} placeholder='E-mail'/>
-              <InputLog value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Mot de passe'/>
+              <InputLog value={email} onChange={(e) => setEmail(e.target.value)} placeholder="E-mail"/>
+              <InputLog value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Mot de passe" />
               <TitleLog>
                 <InputCheckbox
                 type="checkbox"
@@ -56,7 +56,7 @@ const FormulaireLogin = ({ setToken, setNoLog }) => {
                 <ButtonInscrire onClick={handleLogin}>Se connecter</ButtonInscrire>
           </FormLog> 
           <BtnLink>Mot de passe oublié?</BtnLink>
-          <Span>Vous n'avez pas de compte? <BtnLink onClick={handleInscrire}>S'inscrire</BtnLink></Span>
+          <Span>Vous n'avez pas de compte? <BtnLink onClick={handleInscrire}>Inscrire</BtnLink></Span>
         </ContainerForm>
       </DivContainer>
     )

@@ -5,9 +5,9 @@ import { DivContainer, Span, TitleForm, ContainerForm, FormLog, TitleLog, InputL
 
 const FormulaireInscription = ({setNoLog}) => {
 
-  const [nom, setNom] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [nom, setNom] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [isChecked, setIsChecked] = useState(false);
   
   const handleCheckBoxChange = () => {
@@ -18,7 +18,7 @@ const FormulaireInscription = ({setNoLog}) => {
     e.preventDefault();
     try {
       if (isChecked) {
-        const response = await axios.post('http://localhost:4000/auth/signup', {
+        const response = await axios.post("http://localhost:4000/auth/signup", {
           nom,
           email,
           password,
@@ -26,12 +26,12 @@ const FormulaireInscription = ({setNoLog}) => {
         
         setNoLog(false)
       } else {
-        alert("Acceopte les condition d'utilisateur")
+        alert("Accepte les condition d'utilisateur")
       }
 
       console.log(response.data);
     } catch (error) {
-      console.error('Erreur lors de l\'inscription :', error);
+      console.error("Erreur lors de l'inscription :", error);
     }
   };
 
@@ -45,9 +45,9 @@ const FormulaireInscription = ({setNoLog}) => {
       <ContainerForm>
         <FormLog>
           <TitleLog>Inscrivez-vous en tant que Admin</TitleLog>
-          <InputLog value={nom} onChange={(e) => setNom(e.target.value)}  placeholder='Nom' />
-          <InputLog value={email} onChange={(e) => setEmail(e.target.value)}  placeholder='E-mail'/>
-          <InputLog value={password} onChange={(e) => setPassword(e.target.value)}  placeholder='Mot de passe'/>
+          <InputLog value={nom} onChange={(e) => setNom(e.target.value)}  placeholder="Nom" />
+          <InputLog value={email} onChange={(e) => setEmail(e.target.value)}  placeholder="E-mail"/>
+          <InputLog value={password} onChange={(e) => setPassword(e.target.value)}  placeholder="Mot de passe"/>
           <TitleLog>
             <InputCheckbox
               type="checkbox"
@@ -55,7 +55,7 @@ const FormulaireInscription = ({setNoLog}) => {
               onChange={handleCheckBoxChange}
             /> Accepter les termes et la politique
           </TitleLog>
-          <ButtonInscrire onClick={handleSubmit}>S'inscrire</ButtonInscrire>
+          <ButtonInscrire onClick={handleSubmit}>Inscrire</ButtonInscrire>
         </FormLog> 
         <Span>Vous avez un compte? <BtnLink onClick={handleLogin}>Se connecter</BtnLink></Span>
       </ContainerForm> 

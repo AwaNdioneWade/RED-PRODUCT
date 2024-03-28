@@ -3,12 +3,12 @@ import React, { useState, useRef } from 'react';
 const axios = require('axios');
 
 const Formulaire = ({ onClose }) => {
-  const [nom, setNom] = useState(''); 
-  const [adresse, setAdresse] = useState('');
-  const [email, setEmail] = useState('');
-  const [numero, setNumero] = useState('');
-  const [prix, setPrix] = useState('');
-  const [devise, setDevise] = useState('fxof');
+  const [nom, setNom] = useState(""); 
+  const [adresse, setAdresse] = useState("");
+  const [email, setEmail] = useState("");
+  const [numero, setNumero] = useState("");
+  const [prix, setPrix] = useState("");
+  const [devise, setDevise] = useState("fxof");
   const [selectedImage, setSelectedImage] = useState(null);
   const inputRef = useRef(null);
 
@@ -31,33 +31,33 @@ const Formulaire = ({ onClose }) => {
   const submitHotel = async () => {
     try {
       const formData = new FormData();
-      formData.append('nom', nom);
-      formData.append('adresse', adresse);
-      formData.append('email', email);
-      formData.append('numero', numero);
-      formData.append('prix', prix);
-      formData.append('devise', devise);
-      formData.append('imageHotel', selectedImage); 
+      formData.append("nom", nom);
+      formData.append("adresse", adresse);
+      formData.append("email", email);
+      formData.append("numero", numero);
+      formData.append("prix", prix);
+      formData.append("devise", devise);
+      formData.append("imageHotel", selectedImage); 
 
-      const response = await axios.post('http://localhost:4000/hotels', formData, {
+      const response = await axios.post("http://localhost:4000/hotels", formData, {
         headers: {
-          'Content-Type': 'multipart/form-data',
+          "Content-Type": "multipart/form-data",
         },
       });
 
       if (response.status >= 200 && response.status < 300) {
         // La requête a réussi, traitement de la réponse
-        alert('yes');
-        console.log('Hôtel ajouté avec succès :', response.data);
+        alert("yes");
+        console.log("Hôtel ajouté avec succès :", response.data);
       } else {
         // La requête a échoué, traitement de l'erreur
         alert('no');
-        console.error('Erreur lors de l\'ajout de l\'hôtel :', response.statusText);
+        console.error("Erreur lors de l'ajout de l'hôtel :", response.statusText);
       }
     } catch (error) {
       // Erreur lors de l'exécution de la requête
-      alert('no');
-      console.error('Erreur lors de l\'ajout de l\'hôtel :', error);
+      alert("no");
+      console.error("Erreur lors de l\'ajout de l\'hôtel :", error);
     } finally {
       onClose();
     }
