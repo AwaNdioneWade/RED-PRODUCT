@@ -1,0 +1,68 @@
+import React, { useState } from 'react';
+import axios from 'axios';
+import { BsBookmarkFill } from "react-icons/bs";
+
+import { DivContainer, Span, TitleForm, ContainerForm, FormLog, TitleLog, InputLog, InputCheckbox, ButtonInscrire, BtnLink } from './style';
+
+const FormulaireInscription = ({setNoLog}) => {
+
+  const [nom, setNom] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [isChecked, setIsChecked] = useState(false);
+  
+  const handleCheckBoxChange = () => {
+    setIsChecked(!isChecked);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (isChecked) {
+        const response = await axios.post('http://localhost:4000/auth/signup', {
+          nom,
+          email,
+          password,
+        });
+        
+        setNoLog(false)
+      } else {
+        alert("Acceopte les condition d'utilisateur")
+      }
+
+      console.log(response.data);
+    } catch (error) {
+      console.error('Erreur lors de l\'inscription :', error);
+    }
+  };
+
+  const handleLogin = () => {
+    setNoLog(false)
+    console.log("Se connecté");
+  };
+    
+  return (
+    <DivContainer>
+      <ContainerForm>
+        {/* <TitleForm><BsBookmarkFill /> Red Product</TitleForm> */}
+        <FormLog>
+          <TitleLog>Inscrivez-vous en tant que Admin</TitleLog>
+          <InputLog value={nom} onChange={(e) => setNom(e.target.value)}  placeholder='Nom' />
+          <InputLog value={email} onChange={(e) => setEmail(e.target.value)}  placeholder='E-mail'/>
+          <InputLog value={password} onChange={(e) => setPassword(e.target.value)}  placeholder='Mot de passe'/>
+          <TitleLog>
+            <InputCheckbox
+              type="checkbox"
+              checked={isChecked}
+              onChange={handleCheckBoxChange}
+            /> Accepter les termes et la politique
+          </TitleLog>
+          <ButtonInscrire onClick={handleSubmit}>S'inscrire</ButtonInscrire>
+        </FormLog> 
+        <Span>Vous avez un compte? <BtnLink onClick={handleLogin}>Se connecter</BtnLink></Span>
+      </ContainerForm> 
+    </DivContainer> 
+  );
+}
+
+export default FormulaireInscription;
