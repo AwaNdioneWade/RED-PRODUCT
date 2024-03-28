@@ -62,4 +62,4 @@ const FormulaireLogin = ({ setToken, setNoLog }) => {
     )
   }
 
-  export default FormulaireLogin;
+export default FormulaireLogin;

@@ -17,39 +17,3 @@ export default function Home() {
             : noLog ? <FormulaireInscription setNoLog={setNoLog} /> : <FormulaireLogin setNoLog={setNoLog} setToken={setToken} />
   );
 }
-
-
-
-
-
-const TexteFormulaireMdpOubli = styled.p`
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: left;
-`
-
-const FormulaireMdpOubli = () => {
-  const [isChecked, setIsChecked] = useState(false);
-  const [isLogin, setIsLogin] = useState(true);
-
-  const handleCheckBoxChange = () => {
-    setIsChecked(!isChecked);
-  };
-  const handleIsLogin = () => {
-    setIsChecked(!isChecked);
-  };
-  return(
-    <ContainerForm>      
-      <FormLog>
-        <TitleLog>Inscrivez-vous en tant que Admin</TitleLog>
-        <TexteFormulaireMdpOubli>
-          Entrez votre adresse e-mail ci-dessous et nous vous envoyons des instructions sur la façon de modifier votre mot de passe.
-        </TexteFormulaireMdpOubli>
-          <InputLog placeholder='E-mail'/>
-          <ButtonInscrire>S'inscrire'</ButtonInscrire>
-      </FormLog> 
-      <span>Revenir à la <Mdp>Connexion</Mdp></span>
-    </ContainerForm>  
-  )
-}
