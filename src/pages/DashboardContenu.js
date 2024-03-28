@@ -70,38 +70,6 @@ const DashboardContenu = () => {
           </TextCard>
           </Card>
         </DivCard>
-        {/* <DivCard>
-          <Card>
-            <DivCardIcone background="#F90000" ><HiOutlineMailOpen /></DivCardIcone>
-            <TextCard>
-              <NumTextCard>
-                <NumCard>25</NumCard>
-                <Texte>E-mails</Texte>
-              </NumTextCard>
-              <Texte>Je ne sais pas quoi mettre</Texte>
-            </TextCard>
-          </Card>
-          <Card>
-            <DivCardIcone background="#9C27B0" ><RiHotelFill /></DivCardIcone>
-            <TextCard>
-              <NumTextCard>
-                <NumCard>40</NumCard>
-                <Texte>Hotels</Texte>
-              </NumTextCard>
-              <Texte>Je ne sais pas quoi mettre</Texte>
-            </TextCard>
-          </Card>
-          <Card>
-            <DivCardIcone background="#1565C0" ><GiBackup /></DivCardIcone>
-          <TextCard>
-            <NumTextCard>
-              <NumCard>02</NumCard>
-              <Texte>Entités</Texte>
-            </NumTextCard>
-            <Texte>Je ne sais pas quoi mettre</Texte>
-          </TextCard>
-          </Card>
-        </DivCard> */}
       </DivDashboardContenu>
     );
   };

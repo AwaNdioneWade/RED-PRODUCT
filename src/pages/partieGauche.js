@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { useState } from 'react';
 import { DivBurger, CustomLink, DivCrud, DivProfil, DivProfilSid, Etat, Gauche, IconCrud, Profil, SidebarEnHaut, TexteCrud, TextePrincipal, Title } from './style';
 import { MdDashboard } from 'react-icons/md';
 import { SlScreenDesktop } from 'react-icons/sl';

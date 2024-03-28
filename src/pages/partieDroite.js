@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdNotificationsOutline } from 'react-icons/io';
 import { FaArrowRightFromBracket } from 'react-icons/fa6';
-import { BackgroundContainer, Bar, DivBurger ,Bienvenue, Dashboard, DivAjout, DivIcone, DivProfil, DivSecondBar, Droit, Disconnect, Lorem, SearchInput } from './style';
+import { Bar, DivBurger ,Bienvenue, Dashboard, DivAjout, DivIcone, DivProfil, DivSecondBar, Droit, Disconnect, Lorem, SearchInput } from './style';
 import Modal from './modal';
 import DashboardContenu from './DashboardContenu';
 import HotelsContenu from './hotelContenu';

@@ -1,7 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 
 import PageAccueil from '../pages/accueil';
 import FormulaireLogin from '../pages/formulaireLogin';
