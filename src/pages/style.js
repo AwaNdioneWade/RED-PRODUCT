@@ -58,6 +58,7 @@ export const Gauche = styled.div`
 `;
 export const SidebarEnHaut = styled.div`
   justify-content: none;
+  color: #FFFFFF;
 `;
 export const Title = styled.p`
   font-size: 26.66px;
