@@ -6,7 +6,7 @@ const HotelsContenu = () => {
 
   const [hotels, setHotels] = useState([])
 
-  const getAllHotels = async () => {
+  const fetchAllHotels = async () => {
     try {
       const response = await axios.get('http://localhost:4000/hotels');
       const recupHotesl = response.data
@@ -20,7 +20,7 @@ const HotelsContenu = () => {
     }
   };
   useEffect(()=>{
-    getAllHotels()
+    fetchAllHotels()
   }, [hotels])
     return (
       <>      

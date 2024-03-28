@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { BsBookmarkFill } from "react-icons/bs";
 
 import { DivContainer, Span, TitleForm, ContainerForm, FormLog, TitleLog, InputLog, InputCheckbox, ButtonInscrire, BtnLink } from './style';
 
@@ -44,7 +43,6 @@ const FormulaireInscription = ({setNoLog}) => {
   return (
     <DivContainer>
       <ContainerForm>
-        {/* <TitleForm><BsBookmarkFill /> Red Product</TitleForm> */}
         <FormLog>
           <TitleLog>Inscrivez-vous en tant que Admin</TitleLog>
           <InputLog value={nom} onChange={(e) => setNom(e.target.value)}  placeholder='Nom' />

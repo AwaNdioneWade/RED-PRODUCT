@@ -67,7 +67,7 @@ const Formulaire = ({ onClose }) => {
     <Form>
       <DisplayRow>
         <LabelInput>
-          <Label>Nom de L'hotel</Label>
+          <Label>Nom de l&apos;hotel</Label>
           <Input value={nom} onChange={(e) => setNom(e.target.value)} />
         </LabelInput>
         <LabelInput>

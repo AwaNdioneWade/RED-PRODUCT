@@ -542,10 +542,14 @@ export const Texte = styled.div`
 
 export const DivContentCardHotel = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 21px;
   margin-top: 25px;
   margin-left: 6px;
+  background: #F0F0F0;
+  height: 100vh;
 `;
 
 export const CardHotel = styled.div`

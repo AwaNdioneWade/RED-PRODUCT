@@ -33,7 +33,7 @@ const FormulaireLogin = ({ setToken, setNoLog }) => {
     };
     
 
-    const handleInscire = () => {
+    const handleInscrire = () => {
       console.log("S'inscrire");
       setNoLog(true)
     };
@@ -43,7 +43,7 @@ const FormulaireLogin = ({ setToken, setNoLog }) => {
         <ContainerForm>      
             <TitleForm><BsBookmarkFill /> Red Product</TitleForm>
           <FormLog>
-            <TitleLog>Connectez-vous en tant que Admin</TitleLog>
+            <TitleLog>Connectez-vous en tant qu'administrateur</TitleLog>
               <InputLog value={email} onChange={(e) => setEmail(e.target.value)} placeholder='E-mail'/>
               <InputLog value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Mot de passe'/>
               <TitleLog>
@@ -56,7 +56,7 @@ const FormulaireLogin = ({ setToken, setNoLog }) => {
                 <ButtonInscrire onClick={handleLogin}>Se connecter</ButtonInscrire>
           </FormLog> 
           <BtnLink>Mot de passe oublié?</BtnLink>
-          <Span>Vous n'avez pas de compte? <BtnLink onClick={handleInscire}>S'inscrire</BtnLink></Span>
+          <Span>Vous n'avez pas de compte? <BtnLink onClick={handleInscrire}>S'inscrire</BtnLink></Span>
         </ContainerForm>
       </DivContainer>
     )
