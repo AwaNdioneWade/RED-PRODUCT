@@ -9,7 +9,7 @@ const PartieGauche = ({ onItemClick, selectedItem, isOpen,Open, handleClickBurge
     
   // const fetchUserProfile = async () => {
   //   try {
-  //     const response = await axios.get("http://localhost:4000/auth/profile", {
+  //     const response = await axios.get("https://red-product-api-rn66.onrender.com/auth/profile", {
   //       headers: {
   //         Authorization: `Bearer ${localStorage.getItem("token")}`, 
   //       },

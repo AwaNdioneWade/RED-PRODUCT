@@ -10,7 +10,7 @@ const FormulaireMdpOubli = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:4000/auth/forgot-password", { email });
+      const response = await axios.post("https://red-product-api-rn66.onrender.com/auth/forgot-password", { email });
       setMessage(response.data.message);
       console.log(message);
     } catch (error) {

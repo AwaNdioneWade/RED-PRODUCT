@@ -39,7 +39,7 @@ const Formulaire = ({ onClose }) => {
       formData.append("devise", devise);
       formData.append("imageHotel", selectedImage); 
 
-      const response = await axios.post("http://localhost:4000/hotels", formData, {
+      const response = await axios.post("https://red-product-api-rn66.onrender.com/hotels", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

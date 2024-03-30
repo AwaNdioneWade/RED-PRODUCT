@@ -18,7 +18,7 @@ const PartieDroite = ({ selectedItem, setToken, setNoLog, handleClickBurger, isO
   
     const fetchAllHotels = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/hotels");
+        const response = await axios.get("https://red-product-api-rn66.onrender.com/hotels");
         const recupHotesl = response.data
         setHotels(recupHotesl)
         console.log(response.data);

@@ -18,7 +18,7 @@ const FormulaireInscription = ({setNoLog}) => {
     e.preventDefault();
     try {
       if (isChecked) {
-        const response = await axios.post("http://localhost:4000/auth/signup", {
+        const response = await axios.post("https://red-product-api-rn66.onrender.com/signup", {
           nom,
           email,
           password,
