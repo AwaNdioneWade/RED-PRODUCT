@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 import { BsBookmarkFill } from "react-icons/bs";
 
-import { TitleForm, DivContainer, ContainerForm, FormLog, TitleLog, InputLog, InputCheckbox, ButtonInscrire, BtnLink, Span } from './style';
+import { TitleForm, DivContainer, ContainerForm, FormLog, TitleLog, InputLog, InputCheckbox, ButtonInscrire, BtnLink, Span } from "./style";
 
-const FormulaireLogin = ({ setToken, setNoLog }) => {
+const FormulaireLogin = ({ setToken, setNoLog, setNoMdp }) => {
     const [isChecked, setIsChecked] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -30,12 +30,16 @@ const FormulaireLogin = ({ setToken, setNoLog }) => {
       } catch (error) {
         console.error("Erreur lors de la connexion :", error);
       }
-    };
-    
+    };    
 
     const handleInscrire = () => {
       console.log("Inscrire");
       setNoLog(true)
+    };
+
+    const handleMdp = () => {
+      console.log("réinitialise");
+      setNoMdp(false)
     };
 
     return(
@@ -55,7 +59,7 @@ const FormulaireLogin = ({ setToken, setNoLog }) => {
               </TitleLog>
                 <ButtonInscrire onClick={handleLogin}>Se connecter</ButtonInscrire>
           </FormLog> 
-          <BtnLink>Mot de passe oublié?</BtnLink>
+          <BtnLink onClick={handleMdp}>Mot de passe oublié?</BtnLink>
           <Span>Vous n'avez pas de compte? <BtnLink onClick={handleInscrire}>Inscrire</BtnLink></Span>
         </ContainerForm>
       </DivContainer>

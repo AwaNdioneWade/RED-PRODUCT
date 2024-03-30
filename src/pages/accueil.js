@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import PartieDroite from './partieDroite';
-import PartieGauche from './partieGauche';
-import { Container } from './style';
+import React, { useState } from "react";
+import PartieDroite from "./partieDroite";
+import PartieGauche from "./partieGauche";
+import { Container } from "./style";
 
 const PageAccueil = ({token, setToken, setNoLog}) => {
     const [selectedItem, setSelectedItem] = useState('');

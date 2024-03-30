@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { DivBurger, CustomLink, DivCrud, DivProfil, DivProfilSid, Etat, Gauche, IconCrud, Profil, SidebarEnHaut, TexteCrud, TextePrincipal, Title } from './style';
-import { MdDashboard } from 'react-icons/md';
-import { SlScreenDesktop } from 'react-icons/sl';
+import { useState } from "react";
+import { DivBurgerSid, CustomLink, DivCrud, DivProfil, DivProfilSid, Etat, Gauche, IconCrud, Profil, SidebarEnHaut, TexteCrud, TextePrincipal, Title } from "./style";
+import { MdDashboard } from "react-icons/md";
+import { SlScreenDesktop } from "react-icons/sl";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const PartieGauche = ({ onItemClick, selectedItem, isOpen,Open, handleClickBurger }) => {
@@ -9,14 +9,14 @@ const PartieGauche = ({ onItemClick, selectedItem, isOpen,Open, handleClickBurge
     
   // const fetchUserProfile = async () => {
   //   try {
-  //     const response = await axios.get('http://localhost:4000/auth/profile', {
+  //     const response = await axios.get("http://localhost:4000/auth/profile", {
   //       headers: {
   //         Authorization: `Bearer ${localStorage.getItem('token')}`, 
   //       },
   //     });
   //     setUser(response.data);
   //   } catch (error) {
-  //     console.error('Erreur lors de la récupération du profil de l\'utilisateur :', error);
+  //     console.error("Erreur lors de la récupération du profil de l\'utilisateur :", error);
   //     throw error;
   //   }
   // };
@@ -29,19 +29,19 @@ const PartieGauche = ({ onItemClick, selectedItem, isOpen,Open, handleClickBurge
     return (
       <Gauche isOpen={isOpen}>
         <SidebarEnHaut>
-          <DivBurger isOpen={Open} onClick={handleClickBurger}><GiHamburgerMenu /></DivBurger>
+          <DivBurgerSid isOpen={Open} onClick={handleClickBurger}><GiHamburgerMenu /></DivBurgerSid>
           <Title>RED PRODUCT</Title>
           <TextePrincipal>Principal</TextePrincipal>
-          <DivCrud isDashboard={selectedItem === 'dashboard' || selectedItem === ''}>
+          <DivCrud isDashboard={selectedItem === "dashboard" || selectedItem === ""}>
             <IconCrud><MdDashboard /></IconCrud>
             <TexteCrud>
-              <CustomLink isDashboard={selectedItem === 'dashboard' || selectedItem === ''} onClick={() => onItemClick('dashboard')}>Dashboard</CustomLink>
+              <CustomLink isDashboard={selectedItem === "dashboard" || selectedItem === ""} onClick={() => onItemClick("dashboard")}>Dashboard</CustomLink>
             </TexteCrud>
           </DivCrud>
-          <DivCrud isDashboard={selectedItem === 'hotels'}>
+          <DivCrud isDashboard={selectedItem === "hotels"}>
             <IconCrud><SlScreenDesktop /></IconCrud>
             <TexteCrud>
-              <CustomLink isDashboard={selectedItem === 'hotels'} onClick={() => onItemClick('hotels')}>Liste Hotels</CustomLink>
+              <CustomLink isDashboard={selectedItem === "hotels"} onClick={() => onItemClick("hotels")}>Liste Hotels</CustomLink>
             </TexteCrud>
           </DivCrud>
         </SidebarEnHaut>

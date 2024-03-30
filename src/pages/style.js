@@ -171,69 +171,95 @@ export const Disconnect = styled.button`
   border: none;
   background: none;
   cursor: pointer;
+  @media (max-width: 882px) { 
+    font-size: 20px;
+  }
 `
 export const Bar = styled.div`
+  position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background: #FFFFFF;
+  width: 80%;
   height: 75px;
-  padding-left: 25px;
-  margin-left: 8px;
+  padding: 0 0px 0 25px;
   z-index: 0;
 
   
-  @media (max-width: 1230px) {
-    padding-left: 70px;
-  }
+    @media (max-width: 1260px) {
+      margin-left: 20px;
+      width: 78%;
+    }
   
-    @media (max-width: 1004px) {
-      padding-left: 90px;
+    @media (max-width: 1135px) {
+      margin-left: 40px;
+      width: 76%;
     }
 
-  
-  ${props => props.navbar && css`
-    flex-wrap : wrap;
-    position: fixed;
-    width: 80%;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 4px solid #F0F0F0; 
-
-    @media (max-width: 1230px) {
-      width: 75%;
-    }    
-
-    @media (max-width: 1004px) {
-      width: 73%;
+    @media (max-width: 1040px) {
+      margin-left: 62px;
+      width: 74%;
     }
-
-    @media (max-width: 739px) { 
-      width: 97%;
-      flex-wrap: wrap;
-      padding-left: 0px;
-      height: 125px;
-    }
-      
-
     
-
-  `}
-
-  ${props => props.secondBar && css`
-    width: 97%;
-    align-items: center;
-    margin-top: 78px; 
-
-    @media (max-width: 1230px) {
-      width: 93.5%;
+    @media (max-width: 930px) {
+      margin-left: 86px;
+      width: 70%;
     }
 
     @media (max-width: 882px) {
-      width: 850px;
-      margin-top: 130px; 
+      flex-wrap : wrap;
+      width: 97%;
+      margin-left: 0px;
     }
 
+    @media (max-width: 367px) {
+      justify-content: start;
+    }
+  
+  ${props => props.navbar && css`
+    flex-wrap : wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 4px solid #F0F0F0;
+    
+    @media (max-width: 367px) {
+      height: 105px;
+    }
+  `}
+
+  ${props => props.secondBar && css`
+    align-items: center;
+    margin-top: 79px;
+
+    @media (max-width: 1260px) {
+      padding-right: 40px;
+      width: 74%;
+    }
+
+    @media (max-width: 1135px) {
+      width: 73%;
+    }
+
+    @media (max-width: 1004px) {
+      width: 69%;
+    }
+
+    @media (max-width: 930px) {
+      width: 66%;
+    }
+    @media (max-width: 882px) {
+      width: 93%;
+    }
+    
+    @media (max-width: 436px) {
+      // height: 150px;
+    }
+
+    @media (max-width: 367px) {
+      margin-top: 110px;
+      justify-content: space-between;
+    }
   `}
 
 `
@@ -241,6 +267,20 @@ export const DivBurger= styled.button`
   display: none;
   border: none;
   background: none;
+  @media (max-width: 882px) { 
+    font-size: 28px;
+    display: flex;    
+    display: ${props => props.isOpen ? 'flex' : 'none'};
+  }
+`
+export const DivBurgerSid= styled.button`  
+  display: none;
+  border: none;
+  background: none;
+  color: white;
+  margin-top: 10px;
+  margin-left: 200px;
+  text-align: end;
   @media (max-width: 882px) { 
     font-size: 28px;
     display: flex;    
@@ -255,6 +295,13 @@ export const Dashboard = styled.p`
 font-size: 26px;
 font-weight: 500;
 text-align: left;
+
+@media (max-width: 882px) { 
+  font-size: 20px;
+}
+@media (max-width: 562px) { 
+  display: none;
+}
 `;
 export const Bienvenue = styled.p`
   font-size: 32px;
@@ -277,13 +324,15 @@ export const DivIcone = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap; 
   gap: 10px;
   font-size: 22px;
   margin-right: 25px;
+
   @media (max-width: 882px) { 
-    flex-wrap: wrap; 
   }
-`;
+
+`
 export const SearchInput = styled.input`
   font-size: 16px;
   padding: 8px 12px 8px 40px; 
@@ -300,12 +349,21 @@ export const SearchInput = styled.input`
   ::placeholder {
     color: #aaa;
   }
+  
+  @media (max-width: 882px) { 
+    width: 150px;
+  }
+  @media (max-width: 436px) { 
+    width: 50px;
+  }
+  
 `;
 
 
 // STYLE MODAL
 
 export const DivAjout = styled.div`
+  display: flex;
   font-size: 16px;
   padding: 8px 12px 8px 40px; 
   border-radius: 10px;
@@ -313,6 +371,21 @@ export const DivAjout = styled.div`
   width: 250px;
   height: 20px;
   cursor: pointer;
+  @media (max-width: 436px) { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 28px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+  }
+`;
+export const TextDivAjout = styled.div`
+  @media (max-width: 436px) {
+    display: none;
+  }
 `;
 export const ModalWrapper = styled.div`
   position: fixed;
@@ -451,6 +524,7 @@ export const DivDashboardContenu = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 200px; 
 `
 export const DivCard = styled.div`
   display: flex; 
@@ -458,7 +532,6 @@ export const DivCard = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  margin-top: 20px;
 
   @media (max-width: 1230px) {
    margin-left: 20px;
@@ -546,10 +619,22 @@ export const DivContentCardHotel = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 21px;
-  margin-top: 25px;
+  margin-top: 200px; 
   margin-left: 6px;
   background: #F0F0F0;
   height: 100vh;
+  @media (max-width: 1350px) {
+    margin-left: 20px;
+  }
+  @media (max-width: 1190px) {
+    margin-left: 40px;
+  }
+  @media (max-width: 1090px) {
+    margin-left: 60px;
+  }
+  @media (max-width: 436px) {
+    // margin-top: 300px; 
+  }
 `;
 
 export const CardHotel = styled.div`
@@ -558,11 +643,15 @@ export const CardHotel = styled.div`
   width: 245px;
   height: 290px;
   top: 225px;
-  left: 411px;
+  // left: 411px;
   gap: 0px;
   border-radius: 13.65px;
   opacity: 0px;
   background: #FFFFFF;
+  
+  @media (max-width: 1350px) {
+    // width: 200px;
+  }
 `;
 
 export const DivImage = styled.div`
@@ -574,6 +663,10 @@ export const DivImage = styled.div`
   border-radius: 13px 13px 0px 0px;
   opacity: 0px;
   background: ${props => props.background ? `url(${props.background})` : `url("")`};
+  
+  @media (max-width: 1350px) {
+    // width: 200px;
+  }
 `;
 
 export const SpanHotel = styled.span`
@@ -625,9 +718,8 @@ export const FormLog = styled.form`
 `
 export const TitleLog = styled.p`
   font-size: 16px;
-  font-weight: 400;
-  line-height: 34.17px;
-  text-align: left;
+  line-height: 34px;
+  text-align: center;
   text-transform: uppercase;
 `
 export const InputLog = styled.input`

@@ -1,5 +1,5 @@
-import { HiOutlineMailOpen } from 'react-icons/hi';
-import { FaUsers } from 'react-icons/fa';
+import { HiOutlineMailOpen } from "react-icons/hi";
+import { FaUsers } from "react-icons/fa";
 import { FaWpforms } from "react-icons/fa6";
 import { LuMessagesSquare } from "react-icons/lu";
 import { RiHotelFill } from "react-icons/ri";
@@ -61,13 +61,13 @@ const DashboardContenu = () => {
           </Card>
           <Card>
             <DivCardIcone background="#1565C0" ><GiBackup /></DivCardIcone>
-          <TextCard>
-            <NumTextCard>
-              <NumCard>02</NumCard>
-              <Texte>Entités</Texte>
-            </NumTextCard>
-            <Texte>Je ne sais pas quoi mettre</Texte>
-          </TextCard>
+            <TextCard>
+              <NumTextCard>
+                <NumCard>02</NumCard>
+                <Texte>Entités</Texte>
+              </NumTextCard>
+              <Texte>Je ne sais pas quoi mettre</Texte>
+            </TextCard>
           </Card>
         </DivCard>
       </DivDashboardContenu>

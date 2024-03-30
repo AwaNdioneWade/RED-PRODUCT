@@ -1,31 +1,12 @@
-import { useEffect, useState } from "react";
-import { BackgroundContainer, CardHotel, DivContentCardHotel, DivImage, NomHotel, PrixHotel, SpanHotel } from "./style";
-const axios = require('axios');
+import { CardHotel, DivContentCardHotel, DivImage, NomHotel, PrixHotel, SpanHotel } from "./style";
 
-const HotelsContenu = () => {
+const HotelsContenu = ({ filtreHotels }) => {
 
-  const [hotels, setHotels] = useState([])
 
-  const fetchAllHotels = async () => {
-    try {
-      const response = await axios.get('http://localhost:4000/hotels');
-      const recupHotesl = response.data
-      setHotels(recupHotesl)
-      console.log(response.data);
-      console.log({hotels});
-      return response.data; // Les données des hôtels sont renvoyées si la requête réussit
-    } catch (error) {
-      console.error('Erreur lors de la récupération des hôtels :', error);
-      throw error; // En cas d'erreur, elle est renvoyée pour être traitée par l'appelant
-    }
-  };
-  useEffect(()=>{
-    fetchAllHotels()
-  }, [hotels])
     return (
       <>      
         <DivContentCardHotel>
-          {hotels.map((hotel, index)=>(
+          {filtreHotels.map((hotel, index)=>(
               <CardHotel key={index}>
                 <DivImage background= {hotel.imageHotel}/>
                 <SpanHotel>{hotel.adresse}</SpanHotel>

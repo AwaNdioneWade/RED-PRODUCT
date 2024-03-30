@@ -1,6 +1,6 @@
 import { AlignEnd, ButtonInscrire, ContainerInputImg, DefaultImage, DisplayRow, Form, ImageInput, Input, Label, LabelInput, PreviewImage, Select, TexteBouton, TexteInputImg } from "./style";
-import React, { useState, useRef } from 'react';
-const axios = require('axios');
+import React, { useState, useRef } from "react";
+const axios = require("axios");
 
 const Formulaire = ({ onClose }) => {
   const [nom, setNom] = useState(""); 
@@ -51,7 +51,7 @@ const Formulaire = ({ onClose }) => {
         console.log("Hôtel ajouté avec succès :", response.data);
       } else {
         // La requête a échoué, traitement de l'erreur
-        alert('no');
+        alert("no");
         console.error("Erreur lors de l'ajout de l'hôtel :", response.statusText);
       }
     } catch (error) {
