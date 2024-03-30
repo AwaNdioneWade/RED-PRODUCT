@@ -21,7 +21,7 @@ const FormulaireMdpOubli = () => {
   return(
     <ContainerForm>      
       <FormLog>
-        <TitleLog>Inscrivez-vous en tant qu'administrateur</TitleLog>
+        <TitleLog>Inscrivez-vous en tant qu &apos administrateur</TitleLog>
         <TexteFormulaireMdpOubli>
           Entrez votre adresse e-mail ci-dessous et nous vous enverrons des instructions sur la façon de modifier votre mot de passe.
         </TexteFormulaireMdpOubli>

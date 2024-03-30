@@ -4,7 +4,7 @@ import PartieGauche from "./partieGauche";
 import { Container } from "./style";
 
 const PageAccueil = ({token, setToken, setNoLog}) => {
-    const [selectedItem, setSelectedItem] = useState('');
+    const [selectedItem, setSelectedItem] = useState("");
 
     const [isOpen, setIsOpen] = useState(true);
     const [Open, setOpen] = useState(false);

@@ -50,14 +50,13 @@ const Formulaire = ({ onClose }) => {
         alert("yes");
         console.log("Hôtel ajouté avec succès :", response.data);
       } else {
-        // La requête a échoué, traitement de l'erreur
         alert("no");
-        console.error("Erreur lors de l'ajout de l'hôtel :", response.statusText);
+        console.error("Erreur lors de lajout de lhôtel :", response.statusText);
       }
     } catch (error) {
-      // Erreur lors de l'exécution de la requête
+      
       alert("no");
-      console.error("Erreur lors de l\'ajout de l\'hôtel :", error);
+      console.error("Erreur lors de lajout de lhôtel :", error);
     } finally {
       onClose();
     }

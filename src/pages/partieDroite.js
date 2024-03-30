@@ -26,7 +26,7 @@ const PartieDroite = ({ selectedItem, setToken, setNoLog, handleClickBurger, isO
         return response.data; // Les données des hôtels sont renvoyées si la requête réussit
       } catch (error) {
         console.error("Erreur lors de la récupération des hôtels :", error);
-        throw error; // En cas d'erreur, elle est renvoyée pour être traitée par l'appelant
+        throw error; 
       }
     };
     useEffect(()=>{
@@ -83,7 +83,7 @@ const PartieDroite = ({ selectedItem, setToken, setNoLog, handleClickBurger, isO
                                           + <TextDivAjout>Créer un nouveau hotel</TextDivAjout>                                          </DivAjout>
                                           <Modal show={modalOpen} onClose={closeModal} />
                                         </>
-                                           : ''}
+                                           : ""}
         </Bar>
         {/* <BackgroundContainer> */}
           {selectedItem === "" && <DashboardContenu />}

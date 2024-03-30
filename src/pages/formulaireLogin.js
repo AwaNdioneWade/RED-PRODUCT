@@ -47,7 +47,7 @@ const FormulaireLogin = ({ setToken, setNoLog, setNoMdp }) => {
         <ContainerForm>      
             <TitleForm><BsBookmarkFill /> Red Product</TitleForm>
           <FormLog>
-            <TitleLog>Connectez-vous en tant qu'administrateur</TitleLog>
+            <TitleLog>Connectez-vous en tant qu&aposadministrateur</TitleLog>
               <InputLog value={email} onChange={(e) => setEmail(e.target.value)} placeholder="E-mail"/>
               <InputLog value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Mot de passe" />
               <TitleLog>
@@ -60,7 +60,7 @@ const FormulaireLogin = ({ setToken, setNoLog, setNoMdp }) => {
                 <ButtonInscrire onClick={handleLogin}>Se connecter</ButtonInscrire>
           </FormLog> 
           <BtnLink onClick={handleMdp}>Mot de passe oublié?</BtnLink>
-          <Span>Vous n'avez pas de compte? <BtnLink onClick={handleInscrire}>Inscrire</BtnLink></Span>
+          <Span>Vous n&aposavez pas de compte? <BtnLink onClick={handleInscrire}>Inscrire</BtnLink></Span>
         </ContainerForm>
       </DivContainer>
     )

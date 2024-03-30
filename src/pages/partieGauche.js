@@ -11,12 +11,12 @@ const PartieGauche = ({ onItemClick, selectedItem, isOpen,Open, handleClickBurge
   //   try {
   //     const response = await axios.get("http://localhost:4000/auth/profile", {
   //       headers: {
-  //         Authorization: `Bearer ${localStorage.getItem('token')}`, 
+  //         Authorization: `Bearer ${localStorage.getItem("token")}`, 
   //       },
   //     });
   //     setUser(response.data);
   //   } catch (error) {
-  //     console.error("Erreur lors de la récupération du profil de l\'utilisateur :", error);
+  //     console.error("Erreur lors de la récupération du profil de lutilisateur :", error);
   //     throw error;
   //   }
   // };

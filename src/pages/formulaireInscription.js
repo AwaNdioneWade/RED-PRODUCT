@@ -31,7 +31,7 @@ const FormulaireInscription = ({setNoLog}) => {
 
       console.log(response.data);
     } catch (error) {
-      console.error("Erreur lors de l'inscription :", error);
+      console.error("Erreur lors de linscription :", error);
     }
   };
 

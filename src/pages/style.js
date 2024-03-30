@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { css } from 'styled-components';
+import { css } from "styled-components";
 
 
 export const Container = styled.div`
@@ -54,7 +54,7 @@ export const Gauche = styled.div`
   }
 
   @media (max-width: 882px) {
-    display: ${props => props.isOpen ? 'none' : 'flex'};  }
+    display: ${props => props.isOpen ? "none" : "flex"};  }
 `;
 export const SidebarEnHaut = styled.div`
   justify-content: none;
@@ -80,8 +80,8 @@ export const DivCrud = styled.div`
   display: flex;
   align-items: center;
   padding: 12px 0 12px 20px;
-  background: ${props => props.isDashboard ? '#F0F0F0' : 'none'};
-  color: ${props => props.isDashboard ? '#55595C' : '#F0F0F0'};
+  background: ${props => props.isDashboard ? "#F0F0F0" : "none"};
+  color: ${props => props.isDashboard ? "#55595C" : "#F0F0F0"};
 `;
 export const IconCrud = styled.div`
   font-size: 18.66px;
@@ -98,7 +98,7 @@ export const TexteCrud = styled.div`
   text-align: left;
 `;
 export const CustomLink = styled.a`
-color: ${props => props.isDashboard ? '#55595C' : '#F0F0F0'};
+color: ${props => props.isDashboard ? "#55595C" : "#F0F0F0"};
   text-decoration: none;
   cursor: pointer;
   padding-left: 20px;
@@ -270,7 +270,7 @@ export const DivBurger= styled.button`
   @media (max-width: 882px) { 
     font-size: 28px;
     display: flex;    
-    display: ${props => props.isOpen ? 'flex' : 'none'};
+    display: ${props => props.isOpen ? "flex" : "none"};
   }
 `
 export const DivBurgerSid= styled.button`  
@@ -284,7 +284,7 @@ export const DivBurgerSid= styled.button`
   @media (max-width: 882px) { 
     font-size: 28px;
     display: flex;    
-    display: ${props => props.isOpen ? 'flex' : 'none'};
+    display: ${props => props.isOpen ? "flex" : "none"};
   }
 `
 export const DivSecondBar = styled.div`
@@ -394,7 +394,7 @@ export const ModalWrapper = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); 
-  display: ${props => props.show ? 'block' : 'none'}; 
+  display: ${props => props.show ? "block" : "none"}; 
   z-index: 999;
 `;
 export const ModalContent = styled.div`
@@ -505,7 +505,7 @@ export const DefaultImage = styled.div`
   width: 150px;
   height: 100px;
   border-radius: 10px;
-  background: url('https://th.bing.com/th/id/OIP.8KLu2_AEKjF4pSQxEzzs3wAAAA?pid=ImgDet&w=182&h=102&c=7')
+  background: url("https://th.bing.com/th/id/OIP.8KLu2_AEKjF4pSQxEzzs3wAAAA?pid=ImgDet&w=182&h=102&c=7")
 
 `
 export const TexteInputImg = styled.span`
@@ -581,9 +581,8 @@ export const DivCardIcone = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: ${props => props.background || '#000000'};
+  background-color: ${props => props.background || "#000000"};
   color: #FFFFFF;
-  font-family: 'Material Icons';
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
