@@ -29,6 +29,7 @@ const PartieDroite = ({ selectedItem, setToken, setNoLog, handleClickBurger, isO
         throw error; 
       }
     };
+
     useEffect(()=>{
       fetchAllHotels()
     }, [hotels])
@@ -50,9 +51,16 @@ const PartieDroite = ({ selectedItem, setToken, setNoLog, handleClickBurger, isO
     };
     
     
+    const [hotelsFiltred, setHotelsFiltred] = useState([])
+
     const filtreHotels = hotels.filter((hotel) => 
-      hotel.nom.toLowerCase().includes(valueSearch.toLowerCase())
+    hotel.nom.toLowerCase().includes(valueSearch.toLowerCase())
     )
+    useEffect(()=>{
+      setHotelsFiltred(filtreHotels)
+      console.log({hotelsFiltred})
+    }, [hotels])
+
   
     return (
       <Droit>
@@ -90,7 +98,7 @@ const PartieDroite = ({ selectedItem, setToken, setNoLog, handleClickBurger, isO
         {/* <BackgroundContainer> */}
           {selectedItem === "" && <DashboardContenu />}
           {selectedItem === "dashboard" && <DashboardContenu />}
-          {selectedItem === "hotels" && <HotelsContenu filtreHotels={filtreHotels} />}
+          {selectedItem === "hotels" && <HotelsContenu filtreHotels={filtreHotels} hotelsFiltred={hotelsFiltred} />}
         {/* </BackgroundContainer> */}
       </Droit>
     );
