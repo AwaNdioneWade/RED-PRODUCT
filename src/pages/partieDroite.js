@@ -41,12 +41,14 @@ const PartieDroite = ({ selectedItem, setToken, setNoLog, handleClickBurger, isO
       setModalOpen(false);
     };
     const handleDisconnect = () => {
-      localStorage.removeItem("token")
-      const token = localStorage.removeItem("token");
-      setToken(token)
-      setNoLog(false)
-      console.log("Deconnecté")
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem("token");
+      }
+      setToken(null); // Assurez-vous également de passer null au lieu du token supprimé
+      setNoLog(false);
+      console.log("Déconnecté");
     };
+    
     
     const filtreHotels = hotels.filter((hotel) => 
       hotel.nom.toLowerCase().includes(valueSearch.toLowerCase())

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import PageAccueil from "../pages/accueil";
 import FormulaireLogin from "../pages/formulaireLogin";
@@ -8,10 +8,16 @@ import FormulaireMdpOubli from "../pages/formulaireMDP"
 
 export default function Home() {
 
-  const [token, setToken] = useState(localStorage.getItem("token")); 
+  const [token, setToken] = useState(null); 
   const [noLog, setNoLog] = useState(false)  
   const [noMdp, setNoMdp] = useState(true)  
   
+  useEffect(() => {
+    const storedToken = localStorage.getItem("token");
+    if (storedToken) {
+      setToken(storedToken);
+    }
+  }, []);
 
   return (            
     token ? <PageAccueil token={token} setNoLog={setNoLog} setToken = {setToken} /> 

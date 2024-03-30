@@ -24,9 +24,10 @@ const FormulaireLogin = ({ setToken, setNoLog, setNoMdp }) => {
         console.log(response.data);
         const token = response.data.token;
         // Stocker le token dans le local storage
-        localStorage.setItem("token", token);
-        const tokenRecup = localStorage.getItem("token", token);
-        setToken(tokenRecup)
+        if (typeof window !== 'undefined') {
+          localStorage.setItem("token", token);
+        }
+        setToken(token);
       } catch (error) {
         console.error("Erreur lors de la connexion :", error);
       }
