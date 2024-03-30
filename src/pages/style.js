@@ -764,3 +764,13 @@ export const TexteFormulaireMdpOubli = styled.p`
   line-height: 24px;
   text-align: left;
 `
+
+
+const Deploiement = () => {
+  
+    return (
+      <BackgroundContainer >
+      </BackgroundContainer>
+    );
+  };
+  export default Deploiement;
