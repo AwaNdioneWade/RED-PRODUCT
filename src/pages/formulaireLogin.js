@@ -1,4 +1,4 @@
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import axios from "axios";
 import { BsBookmarkFill } from "react-icons/bs";
@@ -29,9 +29,9 @@ const FormulaireLogin = ({ setToken, setNoLog, setNoMdp }) => {
       console.log(response.data);
       const token = response.data.token;
       // Stocker le token dans le local storage
-      if (typeof window !== 'undefined') {
+      if (typeof window !== "undefined") {
         localStorage.setItem("token", token);
-        // router.push('/accueil');
+        // router.push("/accueil");
       }
       setToken(token);
     } catch (error) {
