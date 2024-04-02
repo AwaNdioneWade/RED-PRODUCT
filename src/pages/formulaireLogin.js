@@ -55,7 +55,7 @@ const FormulaireLogin = ({ setToken, setNoLog, setNoMdp }) => {
       <ContainerForm>      
           <TitleForm><BsBookmarkFill /> Red Product</TitleForm>
         <FormLog>
-          <TitleLog>Connectez-vous en tant qu'administrateur</TitleLog>
+          <TitleLog>Connectez-vous en tant quadministrateur</TitleLog>
             <InputLog value={email} onChange={(e) => setEmail(e.target.value)} placeholder="E-mail"/>
             <InputLog value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Mot de passe" />
             <TitleLog>
