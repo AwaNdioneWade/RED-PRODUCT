@@ -19,10 +19,13 @@ export default function Home() {
     }
   }, []);
 
+
   return (            
     token ? <PageAccueil token={token} setNoLog={setNoLog} setToken = {setToken} /> 
             : noLog ? <FormulaireInscription setNoLog={setNoLog} /> 
-            : noMdp ? <FormulaireLogin setNoMdp={setNoMdp} setNoLog={setNoLog} setToken={setToken} /> 
+            : noMdp ? 
+            <FormulaireLogin setNoMdp={setNoMdp} setNoLog={setNoLog} setToken={setToken} /> 
             : <FormulaireMdpOubli />
-  );
+  
+            );
 }

@@ -18,6 +18,7 @@ const PageAccueil = ({token, setToken, setNoLog}) => {
     const handleClick = (item) => {
       setSelectedItem(item);
     };
+
  
   
     return(

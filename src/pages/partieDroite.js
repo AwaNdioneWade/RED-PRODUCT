@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
-import { TextDivAjout, Bar, DivBurger ,Bienvenue, Dashboard, DivAjout, DivIcone, DivProfil, DivSecondBar, Droit, Disconnect, Lorem, SearchInput } from "./style";
+import { TextDivAjout, DivBurger ,Bienvenue, Dashboard, DivAjout, DivIcone, DivProfil, DivSecondBar, Droit, Disconnect, Lorem, SearchInput, Bar } from "./style";
 import Modal from "./modal";
 import DashboardContenu from "./DashboardContenu";
 import HotelsContenu from "./hotelContenu";
@@ -95,11 +95,9 @@ const PartieDroite = ({ selectedItem, setToken, setNoLog, handleClickBurger, isO
                                         </>
                                            : ""}
         </Bar>
-        {/* <BackgroundContainer> */}
           {selectedItem === "" && <DashboardContenu />}
           {selectedItem === "dashboard" && <DashboardContenu />}
-          {selectedItem === "hotels" && <HotelsContenu filtreHotels={filtreHotels} hotelsFiltred={hotelsFiltred} />}
-        {/* </BackgroundContainer> */}
+          {selectedItem === "hotels" && <HotelsContenu filtreHotels={filtreHotels} />}
       </Droit>
     );
   };

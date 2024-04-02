@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { CardHotel, DivContentCardHotel, DivImage, NomHotel, PrixHotel, SpanHotel } from "./style";
 
-const HotelsContenu = ({ filtreHotels, hotelsFiltred }) => {
+const HotelsContenu = ({ filtreHotels }) => {
   const [hotels, setHotels] = useState([])
   
   useEffect(()=>{
@@ -11,7 +11,7 @@ const HotelsContenu = ({ filtreHotels, hotelsFiltred }) => {
     return (
       <>      
         <DivContentCardHotel>
-          {hotelsFiltred.map((hotel, index)=>(
+          {filtreHotels.map((hotel, index)=>(
               <CardHotel key={index}>
                 <DivImage background= {hotel.imageHotel}/>
                 <SpanHotel>{hotel.adresse}</SpanHotel>
