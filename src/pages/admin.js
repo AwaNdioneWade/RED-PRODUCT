@@ -18,9 +18,6 @@ const PageAccueil = ({children}) => {
     };
   
     const router = useRouter();
-    // useEffect(()=>{
-    //   router.push(`/${selectedItem}`)
-    // }, [])
 
     const handleClick = (item) => {
       setSelectedItem(item);
@@ -28,46 +25,17 @@ const PageAccueil = ({children}) => {
       console.log(item)
     };
     
-    // const [valueSearch, setValueSearch] = useState("");
-    // const [hotels, setHotels] = useState([])
-  
-    // const fetchAllHotels = async () => {
-    //   try {
-    //     const response = await axios.get("https://red-product-api-rn66.onrender.com/hotels");
-    //     const recupHotesl = response.data
-    //     setHotels(recupHotesl)
-    //     console.log(response.data);
-    //     console.log({hotels});
-    //     return response.data; // Les données des hôtels sont renvoyées si la requête réussit
-    //   } catch (error) {
-    //     console.error("Erreur lors de la récupération des hôtels :", error);
-    //     throw error; 
-    //   }
-    // };
-    // useEffect(()=>{
-    //   fetchAllHotels()
-    // }, [hotels])
-
-    // const filtreHotels = hotels.filter((hotel) => 
-    // hotel.nom.toLowerCase().includes(valueSearch.toLowerCase())
-    // )
 
  
     return(
       <Container>
         <PartieGauche handleClickBurger={handleClickBurger} Open={Open} isOpen={isOpen} selectedItem={selectedItem} onItemClick={handleClick} />
-            {/* {(selectedItem === "" || selectedItem === "dashboard" || selectedItem === "hotels") && (
-                <PartieGauche handleClickBurger={handleClickBurger} Open={Open} isOpen={isOpen} token={token} setToken={setToken} selectedItem={selectedItem} onItemClick={handleClick} />
-            )} */}
+            
             <HotelProvider>
               <PartieDroite children={children} handleClickBurger={handleClickBurger} isOpen={isOpen} setIsOpen={setIsOpen} selectedItem={selectedItem} >
                 
               </PartieDroite>               
             </HotelProvider>
-          {/* {selectedItem === "" && <DashboardContenu />}
-          {selectedItem === "dashboard" && <DashboardContenu />}
-          {selectedItem === "hotels" && <HotelsContenu filtreHotels={filtreHotels} />}
-          */}
       </Container>
     )
   }

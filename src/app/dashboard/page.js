@@ -1,3 +1,4 @@
+"use client"
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { FaUsers } from "react-icons/fa";
 import { FaWpforms } from "react-icons/fa6";
