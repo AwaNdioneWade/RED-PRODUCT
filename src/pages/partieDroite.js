@@ -6,7 +6,6 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 import { TextDivAjout, DivBurger ,Bienvenue, Dashboard, DivAjout, DivIcone, DivProfil, DivSecondBar, Droit, Disconnect, Lorem, SearchInput, Bar } from "./style";
 import Modal from "./modal";
-import DashboardContenu from "./dashboard";
 import { HotelContext } from "./hotelprovider";
 const axios = require("axios");
 

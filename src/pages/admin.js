@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import PartieGauche from "./partieGauche";
 import PartieDroite from "./partieDroite";
-import DashboardContenu from "./dashboard";
 import { HotelProvider } from "./hotelprovider"
 import { Container } from "./style";
 const axios = require("axios");
