@@ -3,6 +3,7 @@ import { DivBurgerSid, CustomLink, DivCrud, DivProfil, DivProfilSid, Etat, Gauch
 import { MdDashboard } from "react-icons/md";
 import { SlScreenDesktop } from "react-icons/sl";
 import { GiHamburgerMenu } from "react-icons/gi";
+import Link from "next/link";
 
 const PartieGauche = ({ onItemClick, selectedItem, isOpen,Open, handleClickBurger }) => {
   const [user, setUser] = useState(null);    
@@ -34,14 +35,22 @@ const PartieGauche = ({ onItemClick, selectedItem, isOpen,Open, handleClickBurge
           <TextePrincipal>Principal</TextePrincipal>
           <DivCrud isDashboard={selectedItem === "dashboard" || selectedItem === ""}>
             <IconCrud><MdDashboard /></IconCrud>
-            <TexteCrud>
-              <CustomLink isDashboard={selectedItem === "dashboard" || selectedItem === ""} onClick={() => onItemClick("dashboard")}>Dashboard</CustomLink>
+            <TexteCrud>              
+              <Link href="/dashboard">   
+                <CustomLink isDashboard={selectedItem === "dashboard" || selectedItem === ""} >
+                  Dashboard
+                </CustomLink>             
+              </Link>
             </TexteCrud>
           </DivCrud>
           <DivCrud isDashboard={selectedItem === "hotels"}>
             <IconCrud><SlScreenDesktop /></IconCrud>
             <TexteCrud>
-              <CustomLink isDashboard={selectedItem === "hotels"} onClick={() => onItemClick("hotels")}>Liste Hotels</CustomLink>
+              <Link href="/hotels">
+                <CustomLink isDashboard={selectedItem === "hotels"}>
+                  Liste Hotels
+                </CustomLink>
+              </Link>
             </TexteCrud>
           </DivCrud>
         </SidebarEnHaut>

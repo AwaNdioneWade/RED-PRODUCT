@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
-import PageAccueil from "../pages/accueil";
-import FormulaireLogin from "../pages/formulaireLogin";
+import PageAccueil from "../pages/admin";
+import FormulaireLogin from "../pages/login";
 import FormulaireInscription from "../pages/formulaireInscription"
 import FormulaireMdpOubli from "../pages/formulaireMDP"
 
@@ -20,12 +20,7 @@ export default function Home() {
   }, []);
 
 
-  return (            
-    token ? <PageAccueil token={token} setNoLog={setNoLog} setToken = {setToken} /> 
-            : noLog ? <FormulaireInscription setNoLog={setNoLog} /> 
-            : noMdp ? 
-            <FormulaireLogin setNoMdp={setNoMdp} setNoLog={setNoLog} setToken={setToken} /> 
-            : <FormulaireMdpOubli />
-  
+  return (  
+            <FormulaireLogin /> 
             );
 }

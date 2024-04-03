@@ -1,15 +1,18 @@
-import { useEffect, useState } from "react";
-import { CardHotel, DivContentCardHotel, DivImage, NomHotel, PrixHotel, SpanHotel } from "./style";
+"use client"
+import { useContext, useEffect, useState } from "react";
+import { CardHotel, DivContentCardHotel, DivImage, NomHotel, PrixHotel, SpanHotel } from "../../pages/style";
+import PageAccueil from "../../pages/admin";
+import { HotelContext } from "../../pages/hotelprovider";
 
-const HotelsContenu = ({ filtreHotels }) => {
+const HotelsContenu = () => {
   const [hotels, setHotels] = useState([])
-  
+  const {filtreHotels} = useContext(HotelContext)
   useEffect(()=>{
     setHotels(filtreHotels)
-  }, [hotels])
+  }, [filtreHotels])
 
     return (
-      <>      
+      <PageAccueil>      
         <DivContentCardHotel>
           {hotels.map((hotel, index)=>(
               <CardHotel key={index}>
@@ -21,7 +24,7 @@ const HotelsContenu = ({ filtreHotels }) => {
             
           ))}
         </DivContentCardHotel>
-      </>
+      </PageAccueil>
     );
   }
   export default HotelsContenu;

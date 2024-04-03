@@ -6,7 +6,7 @@ import { BsBookmarkFill } from "react-icons/bs";
 import { TitleForm, DivContainer, ContainerForm, FormLog, TitleLog, InputLog, InputCheckbox, ButtonInscrire, BtnLink, Span } from "./style";
 
 
-const FormulaireLogin = ({ setToken, setNoLog, setNoMdp }) => {
+const FormulaireLogin = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -29,11 +29,11 @@ const FormulaireLogin = ({ setToken, setNoLog, setNoMdp }) => {
       console.log(response.data);
       const token = response.data.token;
       // Stocker le token dans le local storage
-      if (typeof window !== "undefined") {
         localStorage.setItem("token", token);
-        // router.push("/accueil");
+        router.push("/dashboard");
+      if (typeof window !== "undefined") {
       }
-      setToken(token);
+      // setToken(token);
     } catch (error) {
       alert("Email où mot de passe incorrect")
       console.error("Erreur lors de la connexion :", error);
@@ -54,7 +54,7 @@ const FormulaireLogin = ({ setToken, setNoLog, setNoMdp }) => {
     <DivContainer>
       <ContainerForm>      
           <TitleForm><BsBookmarkFill /> Red Product</TitleForm>
-        <FormLog>
+        <FormLog onSubmit={handleLogin}>
           <TitleLog>Connectez-vous en tant quadministrateur</TitleLog>
             <InputLog value={email} onChange={(e) => setEmail(e.target.value)} placeholder="E-mail"/>
             <InputLog value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Mot de passe" />
@@ -65,7 +65,7 @@ const FormulaireLogin = ({ setToken, setNoLog, setNoMdp }) => {
               onChange={handleCheckBoxChange}
               /> Gardez-moi connecté
             </TitleLog>
-              <ButtonInscrire onClick={handleLogin}>Se connecter</ButtonInscrire>
+              <ButtonInscrire type="submit">Se connecter</ButtonInscrire>
         </FormLog> 
         <BtnLink onClick={handleMdp}>Mot de passe oublié?</BtnLink>
         <Span>Vous n&aposavez pas de compte? <BtnLink onClick={handleInscrire}>Inscrire</BtnLink></Span>
